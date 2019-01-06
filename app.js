@@ -8,20 +8,20 @@ app.set("view engine", "jade");
 var city = "Riverside";
 //Backticks because replacing something
 //Forecast for one day
-//let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=7b39d84acc855216bc1552e6a482bd4e`;
-var url = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&APPID=7b39d84acc855216bc1552e6a482bd4e";
+var url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=7b39d84acc855216bc1552e6a482bd4e";
+//let url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&APPID=7b39d84acc855216bc1552e6a482bd4e`;
 // @ts-ignore
 app.get("/", function (req, res) {
     //@ts-ignore
     request(url, function (error, response, body) {
         var weatherJson = JSON.parse(body);
         //console.log(weatherJson);
-        var fiveDay = [];
-        for (var j = 1; j < weatherJson.list.length; j++) {
-            console.log(weatherJson[0].main.temp);
-            console.log(weatherJson[0].weather[1]);
-            console.log(weatherJson[0].weather[2]);
-        }
+        // let fiveDay = [];
+        // for (let j: number = 1; j < weatherJson.list.length; j++) {
+        //   console.log(weatherJson[0].main.temp);
+        //   console.log(weatherJson[0].weather[1]);
+        //   console.log(weatherJson[0].weather[2]);
+        // }
         //Weather object
         var weather = {
             city: city,
