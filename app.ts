@@ -94,7 +94,8 @@ app.get("/", function(req, res) {
 });
 
 //console.log("Days: " + startDay + " " + day2 + " " + day3 + " " + day4 + "\n");
+app.listen(process.env.PORT);
 
-app.listen(8000, function() {
-  console.log("Server started on Port 8000");
-});
+// app.listen(8000, function() {
+//   console.log("Server started on Port 8000");
+// });
