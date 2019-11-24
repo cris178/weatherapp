@@ -1,0 +1,45 @@
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  max-width: 20vw;
+  overflow-x: hidden;
+}
+
+textarea:focus,
+input:focus,
+.form-control:focus,
+*:focus {
+  outline: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input {
+  border: none;
+}
+.form-control {
+  border: none;
+}
+input:focus {
+  border: none;
+}
+
+.btn {
+  background-color: white;
+  border: 0;
+}
+
+.btn:focus {
+  background-color: white;
+  border-color: white;
+  border-width: 0px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: white;
+  color: #6c757d;
+}
