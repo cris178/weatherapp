@@ -29,12 +29,6 @@ class Cards extends React.Component {
           ☁️
         </span>
       );
-    } else if (this.props.des === "moderate rain") {
-      return (
-        <span role="img" aria-label="moderate rain">
-          🌧
-        </span>
-      );
     } else if (this.props.des === "light rain") {
       return (
         <span role="img" aria-label="light rain">
@@ -44,19 +38,49 @@ class Cards extends React.Component {
     } else if (this.props.des === "few clouds") {
       return (
         <span role="img" aria-label="few clouds">
-          🌤
+          ☁️
         </span>
       );
-    } else if (this.props.des === "overcast clouds") {
+    } else if (this.props.des === "shower rain") {
       return (
-        <span role="img" aria-label="few clouds">
-          ☁️
+        <span role="img" aria-label="shower rain">
+          🌧
+        </span>
+      );
+    } else if (this.props.des === "rain") {
+      return (
+        <span role="img" aria-label="rain">
+          🌧
+        </span>
+      );
+    } else if (this.props.des === "thunderstorm") {
+      return (
+        <span role="img" aria-label="thunderstorm">
+          🌩
+        </span>
+      );
+    } else if (this.props.des === "snow") {
+      return (
+        <span role="img" aria-label="snow">
+          🌨
+        </span>
+      );
+    } else if (this.props.des === "mist") {
+      return (
+        <span role="img" aria-label="mist">
+          🌫
+        </span>
+      );
+    } else if (this.props.des === "moderate rain") {
+      return (
+        <span role="img" aria-label="moderate rain">
+          🌧
         </span>
       );
     } else if (this.props.des === "overcast clouds") {
       return (
         <span role="img" aria-label="overcast clouds">
-          ☁️
+          🌤
         </span>
       );
     }

@@ -20,6 +20,8 @@ Some issues I encountered were knowing when and where to update state, how to pa
 
 The app will crash when providing a non existant city.
 
+Image not set for all weather cases.
+
 ## Available Scripts
 
 In the project directory, you can run:
