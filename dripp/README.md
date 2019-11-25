@@ -1,25 +1,22 @@
-
 ## Dripp Weather
 
 This web app is built using React as a starter project. Using the commands listed below you can run the application
 locally if the site hasn't been deployed yet.
 
-The web app is pretty straight foward, you enter your city and you get the weather data for the next 5 days. 
+The web app is pretty straight foward, you enter your city and you get the weather data for the next 5 days.
 The weather data is provided by the OpenWeather website with some limitations on the provided data.
 Unfortunately their is no single day temperature provided and instead offers the temperature of each day
 in three hour periods. Thus in order to get a viable temperature I just took the max and min temperatures in a
-24hour period. 
+24hour period.
 
 ## Initial React Impressions
 
 While I was initally confused with how alot of the React details worked I've come to better understand some of the common pitfalls.
-Some issues I encountered were knowing when and where to update state, how to pass state data to and from parent and child components, 
-and how to work with API's. It was a little frustrating and the app is still not the best thing ever but it was fun. 
+Some issues I encountered were knowing when and where to update state, how to pass state data to and from parent and child components, Fixing [Mixed Content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/fixing-mixed-content) " issues and how to work with API's. It was a little frustrating and the app is still not the best thing ever but it was fun.
 
 ## Known Issues
 
-The app will crash when providing a non existant city. 
-
+The app will crash when providing a non existant city.
 
 ## Available Scripts
 

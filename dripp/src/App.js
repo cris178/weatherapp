@@ -15,34 +15,34 @@ class App extends React.Component {
     this.setCity = this.setCity.bind(this);
   }
 
-
   //Gets called everytime state is changed
-  componentDidUpdate(prevState){
-    if(prevState.city !== this.state.city && this.state.isLoaded === false){
+  componentDidUpdate(prevState) {
+    if (prevState.city !== this.state.city && this.state.isLoaded === false) {
       console.log("Different from prev state");
-      if(this.state.city !== ""){
+      if (this.state.city !== "") {
         const APPID = "7b39d84acc855216bc1552e6a482bd4e";
         let API =
-            "http://api.openweathermap.org/data/2.5/forecast?q=" +
-            this.state.city +
-            "&units=imperial&id=524901&APPID=" +
-            APPID;
+          "https://api.openweathermap.org/data/2.5/forecast?q=" +
+          this.state.city +
+          "&units=imperial&id=524901&APPID=" +
+          APPID;
         console.log(API);
 
-        if(this.state.isLoaded === false){
+        if (this.state.isLoaded === false) {
           //Fetch data from url then get results and convert to json fromat. Get json and set state.
-          fetch(API).then(res => res.json()).then(json =>{
-            this.setState({
-              isLoaded: true,
-              user: json
+          fetch(API)
+            .then(res => res.json())
+            .then(json => {
+              this.setState({
+                isLoaded: true,
+                user: json
+              });
             });
-          });
           //Doesn't show change in this function
           console.log("API is Loaded: " + this.state.isLoaded);
         }
       }
     }
-
   }
 
   setCity(arg) {
@@ -54,12 +54,10 @@ class App extends React.Component {
     });
   }
 
-  
-
   render() {
     console.log("State after Passed up: " + this.state.city);
     console.log("API Set: " + this.state.isLoaded);
-    
+
     var country = "";
     var user = "";
     let d = "";
@@ -71,40 +69,38 @@ class App extends React.Component {
     let des = "";
 
     let d1 = "";
-      let tempMax1 = 0;
-      let tempMin1 = 0;
-      let humid1 = 0;
-      let press1 = 0;
-      let winds1 = 0;
-      let des1 = "";
+    let tempMax1 = 0;
+    let tempMin1 = 0;
+    let humid1 = 0;
+    let press1 = 0;
+    let winds1 = 0;
+    let des1 = "";
 
-      let d2 = "";
-      let tempMax2 = 0;
-      let tempMin2 = 0;
-      let humid2 = 0;
-      let press2 = 0;
-      let winds2 = 0;
-      let des2 = "";
+    let d2 = "";
+    let tempMax2 = 0;
+    let tempMin2 = 0;
+    let humid2 = 0;
+    let press2 = 0;
+    let winds2 = 0;
+    let des2 = "";
 
-      let d3 = "";
-      let tempMax3 = 0;
-      let tempMin3 = 0;
-      let humid3 = 0;
-      let press3 = 0;
-      let winds3 = 0;
-      let des3 = "";
+    let d3 = "";
+    let tempMax3 = 0;
+    let tempMin3 = 0;
+    let humid3 = 0;
+    let press3 = 0;
+    let winds3 = 0;
+    let des3 = "";
 
-      let d4 = "";
-      let tempMax4 = 0;
-      let tempMin4 = 0;
-      let humid4 = 0;
-      let press4 = 0;
-      let winds4 = 0;
-      let des4 = "";
+    let d4 = "";
+    let tempMax4 = 0;
+    let tempMin4 = 0;
+    let humid4 = 0;
+    let press4 = 0;
+    let winds4 = 0;
+    let des4 = "";
 
-
-
-    if(this.state.isLoaded){
+    if (this.state.isLoaded) {
       user = this.state.user;
       var cityInfo = user.city;
       var listInfo = user.list;
@@ -126,9 +122,9 @@ class App extends React.Component {
       var windArr = [];
       var weatherDescr = [];
       var dateArr = [];
-  
-      while(i < 40){
-        if(i === 0 ){
+
+      while (i < 40) {
+        if (i === 0) {
           maxTemp = listInfo[0].main.temp_max;
           minTemp = listInfo[0].main.temp_min;
           wind = listInfo[0].wind.speed;
@@ -136,23 +132,23 @@ class App extends React.Component {
           pressure = listInfo[0].main.pressure;
           description = i;
         }
-        if(humidity < listInfo[i].main.humidity){
+        if (humidity < listInfo[i].main.humidity) {
           humidity = listInfo[i].main.humidity;
         }
-        if(pressure < listInfo[i].main.pressure){
+        if (pressure < listInfo[i].main.pressure) {
           pressure = listInfo[i].main.pressure;
         }
-        if(wind < listInfo[i].wind.speed){
+        if (wind < listInfo[i].wind.speed) {
           wind = listInfo[i].wind.speed;
         }
-        if(maxTemp < listInfo[i].main.temp_max){
+        if (maxTemp < listInfo[i].main.temp_max) {
           maxTemp = listInfo[i].main.temp_max;
           description = i;
         }
-        if(minTemp > listInfo[i].main.temp_min){
-          minTemp =listInfo[i].main.temp_min;
+        if (minTemp > listInfo[i].main.temp_min) {
+          minTemp = listInfo[i].main.temp_min;
         }
-        if((i+1)%8 === 0){
+        if ((i + 1) % 8 === 0) {
           dateArr.push(listInfo[description].dt_txt);
           weatherDescr.push(listInfo[description].weather[0].description);
           maxTempArr.push(maxTemp);
@@ -165,7 +161,7 @@ class App extends React.Component {
           humidity = 0;
           pressure = 0;
           wind = 0;
-          description=0;
+          description = 0;
         }
         i++;
       }
@@ -216,13 +212,12 @@ class App extends React.Component {
       winds4 = windArr[4];
       des4 = weatherDescr[4];
       //listInfo[0].main.temp -> listInfo[7].main.temp is one full day
-      
 
       //console.log(user);
       //weathList = user.list;
       //console.log(weathList[0].dt);
     }
-    
+
     return (
       <div className="App">
         <header>
@@ -234,11 +229,51 @@ class App extends React.Component {
           <Cards city={weather.cnt}/>
         ))*/}
         <div className="row alignment">
-          <Cards date={d} tempMax={tempMax} tempMin={tempMin} humid={humid} press={press} winds={winds} des={des} />
-          <Cards date={d1} tempMax={tempMax1} tempMin={tempMin1} humid={humid1} press={press1} winds={winds1} des={des1} />
-          <Cards date={d2} tempMax={tempMax2} tempMin={tempMin2} humid={humid2} press={press2} winds={winds2} des={des2} />
-          <Cards date={d3} tempMax={tempMax3} tempMin={tempMin3} humid={humid3} press={press3} winds={winds3} des={des3} />
-          <Cards date={d4} tempMax={tempMax4} tempMin={tempMin4} humid={humid4} press={press4} winds={winds4} des={des4} />
+          <Cards
+            date={d}
+            tempMax={tempMax}
+            tempMin={tempMin}
+            humid={humid}
+            press={press}
+            winds={winds}
+            des={des}
+          />
+          <Cards
+            date={d1}
+            tempMax={tempMax1}
+            tempMin={tempMin1}
+            humid={humid1}
+            press={press1}
+            winds={winds1}
+            des={des1}
+          />
+          <Cards
+            date={d2}
+            tempMax={tempMax2}
+            tempMin={tempMin2}
+            humid={humid2}
+            press={press2}
+            winds={winds2}
+            des={des2}
+          />
+          <Cards
+            date={d3}
+            tempMax={tempMax3}
+            tempMin={tempMin3}
+            humid={humid3}
+            press={press3}
+            winds={winds3}
+            des={des3}
+          />
+          <Cards
+            date={d4}
+            tempMax={tempMax4}
+            tempMin={tempMin4}
+            humid={humid4}
+            press={press4}
+            winds={winds4}
+            des={des4}
+          />
         </div>
       </div>
     );
