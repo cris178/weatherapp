@@ -1,4 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Dripp Weather
+
+This web app is built using React as a starter project. Using the commands listed below you can run the application
+locally if the site hasn't been deployed yet.
+
+The web app is pretty straight foward, you enter your city and you get the weather data for the next 5 days. 
+The weather data is provided by the OpenWeather website with some limitations on the provided data.
+Unfortunately their is no single day temperature provided and instead offers the temperature of each day
+in three hour periods. Thus in order to get a viable temperature I just took the max and min temperatures in a
+24hour period. 
+
+## Initial React Impressions
+
+While I was initally confused with how alot of the React details worked I've come to better understand some of the common pitfalls.
+Some issues I encountered were knowing when and where to update state, how to pass state data to and from parent and child components, 
+and how to work with API's. It was a little frustrating and the app is still not the best thing ever but it was fun. 
+
+## Known Issues
+
+The app will crash when providing a non existant city. 
+
 
 ## Available Scripts
 
@@ -36,33 +57,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
