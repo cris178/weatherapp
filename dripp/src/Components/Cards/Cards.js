@@ -29,6 +29,12 @@ class Cards extends React.Component {
           ☁️
         </span>
       );
+    } else if (this.props.des === "moderate rain") {
+      return (
+        <span role="img" aria-label="moderate rain">
+          🌧
+        </span>
+      );
     } else if (this.props.des === "light rain") {
       return (
         <span role="img" aria-label="light rain">
