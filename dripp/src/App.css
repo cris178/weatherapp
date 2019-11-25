@@ -15,3 +15,15 @@ header > h1 {
   text-align: center;
   margin-top: 10vh;
 }
+
+
+.row{
+ 
+  justify-content: center;
+}
+
+.App > h1 {
+  color:white;
+  
+  height: 100px;
+}
