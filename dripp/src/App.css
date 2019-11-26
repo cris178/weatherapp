@@ -6,7 +6,6 @@ body {
   padding: 0px;
   border: 0px;
   overflow-x: hidden;
-  overflow-y: hidden;
   background-color: #212c3d;
 }
 
@@ -16,14 +15,18 @@ header > h1 {
   margin-top: 10vh;
 }
 
-
-.row{
- 
+.row {
   justify-content: center;
 }
 
 .App > h1 {
-  color:white;
-  
+  color: white;
+
   height: 100px;
+}
+
+@media only screen and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  html,
+  body {
+  }
 }
