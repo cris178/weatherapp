@@ -1,15 +1,12 @@
 ## Dripp Weather
 
-Dripp Weather: https://drippweather.firebaseapp.com
+![Imgur](https://i.imgur.com/XcqPbuO.png)
 
-This web app is built using React as a starter project. Using the commands listed below you can run the application
-locally if the site hasn't been deployed yet.
+[Dripp Weather](https://drippweather.firebaseapp.com)
 
-The web app is pretty straight foward, you enter your city and you get the weather data for the next 5 days.
-The weather data is provided by the OpenWeather website with some limitations on the provided data.
-Unfortunately their is no single day temperature provided and instead offers the temperature of each day
-in three hour periods. Thus in order to get a viable temperature I just took the max and min temperatures in a
-24hour period.
+This is one of my first React projects. It's a simple weather app that highlights the max and mins in a 5 day week. Because of the limitations of the free Open Weather API it only retrieves data in a 24 hour period and not specific times. That being said, the app is still pretty decent. Just type the city you're in and you'll see your local weather info. 
+
+The app is also responsive so if you want to try it on your phone the bootstrap should be able to handle that view.
 
 ## Initial React Impressions
 
